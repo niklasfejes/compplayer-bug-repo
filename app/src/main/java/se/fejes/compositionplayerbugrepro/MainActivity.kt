@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,18 +34,13 @@ fun HelloWorldApp() {
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.fillMaxSize()
             ) {
-                HelloWorldText()
+                ReproVideoPlayer(
+                    modifier = Modifier.fillMaxSize().aspectRatio(1.0f),
+                    clips = clips,
+                )
             }
         }
     }
-}
-
-@Composable
-fun HelloWorldText() {
-    Text(
-        text = "Hello World!",
-        style = MaterialTheme.typography.headlineLarge
-    )
 }
 
 @Preview(showBackground = true)
