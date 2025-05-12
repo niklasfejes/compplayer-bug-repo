@@ -25,6 +25,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HelloWorldApp() {
+    val clips = listOf(
+        "testimage_nogps.jpg",
+    ).map { Clip(uri = "asset:///$it", duration = 2.0) }
+
     CompositionPlayerTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
