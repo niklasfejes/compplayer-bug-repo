@@ -26,7 +26,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HelloWorldApp() {
     val clips = listOf(
-        "testimage_nogps.jpg",
+        "testimage_nogps.jpg", // Does not work
+        // "testimage_stripped_exif.jpg", // Same image without exif data, work ok
     ).map { Clip(uri = "asset:///$it", duration = 2.0) }
 
     CompositionPlayerTheme {
